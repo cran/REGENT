@@ -337,7 +337,7 @@ colvec[Categories==4]=1
 colvec2=rainbow(6,alpha=0.5)[colvec]
 colvec3=rainbow(6)[colvec]
 colkey=rainbow(6)[c(1,2,4,3)][c(4,3,2,1)%in%Categories]
-tiff(filename=paste(AnalysisName,"_RRDistCol.TIF",sep=""), pointsize=30,width=1500,height=1500,units="px")
+tiff(filename=paste(AnalysisName,"_RRDistCol.TIF",sep=""), pointsize=30,width=1500,height=1500,units="px",antialias="default")
 barplot(MGRRb,width=Mp,border=NA,ylab="Risk Ratio (Rebased)",ylim= c(0, PlotMax2),space=0,xlab="Percentage of population",col=colvec2,density=-100)
 legend(x=0,y=PlotMax2, as.factor(c("High","Elevated","Average","Reduced")[ c(4,3,2,1)%in%Categories]),cex=0.8, col=colkey,pch=19,title="Risk")
 axis(1,seq(0,1,by=0.1), c("0%","","","","","50%","","","","","100%"))
@@ -347,7 +347,7 @@ if(sum(MGRRb>PlotMax)>0){
 arrows(1.03,PlotMax-(PlotMax/5),1.03,PlotMax,col=colkey[1])
 } 
 quiet<-dev.off()
-tiff(filename=paste(AnalysisName,"_RRDistGrey.TIF",sep=""), pointsize=30,width=1500,height=1500,units="px")
+tiff(filename=paste(AnalysisName,"_RRDistGrey.TIF",sep=""), pointsize=30,width=1500,height=1500,units="px",antialias="default")
 barplot(MGRRb,width=Mp,border=NA,ylab="Risk Ratio (Rebased)",ylim= c(0,PlotMax2),space=0,xlab="Percentage of population",density=-100)
 axis(1,seq(0,1,by=0.1), c("0%","","","","","50%","","","","","100%"))
 abline(1,0,col=1)
