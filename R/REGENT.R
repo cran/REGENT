@@ -85,15 +85,16 @@ if(MltplctvOR){
 	if(!MlvlEF){
 OR=c(OR,EnvIn[,match(ORnames,colnames(EnvIn))])
 }else{
-OR=rbind(as.matrix(cbind(OR,rep(NA,length(OR)))), as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))
+if(length(OR)>0){OR=rbind(as.matrix(cbind(OR, matrix(rep(NA,length(OR)*(length(ORnames)-1)),nrow=length(OR)))), as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))}else{OR=as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))])}
 }
 }else{
 			if(!MlvlEF){
 OR=rbind(OR,cbind(EnvIn[,match("RR",colnames(EnvIn))],rep(NA,sum("RR"%in%colnames(EnvIn)))))
 }else{
-OR=rbind(OR, as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))
+if(length(OR)>0){OR=rbind(as.matrix(cbind(OR, matrix(rep(NA,length(OR)*(length(ORnames)-2)),nrow=length(OR)))), as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))}else{OR=as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))])}
 }
 }
+		colnames(OR)=NULL
 Ex=as.matrix(EnvIn[,match(Exnames,colnames(EnvIn))])
 nEx=1-Ex
 SE=as.matrix(EnvIn[,match(SEnames,colnames(EnvIn))])
@@ -455,15 +456,16 @@ if(MltplctvOR){
 	if(!MlvlEF){
 OR=c(OR,EnvIn[,match(ORnames,colnames(EnvIn))])
 }else{
-OR=rbind(as.matrix(cbind(OR,rep(NA,length(OR)))), as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))
+if(length(OR)>0){OR=rbind(as.matrix(cbind(OR, matrix(rep(NA,length(OR)*(length(ORnames)-1)),nrow=length(OR)))), as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))}else{OR=as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))])}
 }
 }else{
 			if(!MlvlEF){
 OR=rbind(OR,cbind(EnvIn[,match("RR",colnames(EnvIn))],rep(NA,sum("RR"%in%colnames(EnvIn)))))
 }else{
-OR=rbind(OR, as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))
+if(length(OR)>0){OR=rbind(as.matrix(cbind(OR, matrix(rep(NA,length(OR)*(length(ORnames)-2)),nrow=length(OR)))), as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))]))}else{OR=as.matrix(EnvIn[,match(ORnames,colnames(EnvIn))])}
 }
 }
+		colnames(OR)=NULL
 Ex=as.matrix(EnvIn[,match(Exnames,colnames(EnvIn))])
 nEx=1-Ex
 SE=as.matrix(EnvIn[,match(SEnames,colnames(EnvIn))])
