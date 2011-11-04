@@ -11,4 +11,3 @@ Example data for Crohns disease in correct input format. Also as text file "Gene
 Franke et al. (2010), Genome-wide meta-analysis increases to 71 the number of confirmed Crohn's disease susceptibility loci  
 }
 \keyword{datasets}
-

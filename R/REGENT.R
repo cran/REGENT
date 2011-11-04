@@ -305,8 +305,8 @@ write.table(x=paste(rep("#",50),collapse=""),file=paste(AnalysisName,".txt",sep=
 #Calculate AUC and proportion of population in each risk category. 
 #######################################################################
 prev=prev/(1-prev)
-vy=c(0,cumsum(rev(Mp*MGRRb)))
-vx=c(0,cumsum(rev(Mp*(1-prev*MGRRb)/(1-prev))))
+vy=c(0,cumsum(rev(Mp*MGRR/sum(MGRR*Mp))))
+vx=c(0,cumsum(rev(Mp*(1-prev*MGRR/sum(MGRR*Mp))/(1-prev))))
 auc=round(sum((vx[2:length(vx)]-vx[1:(length(vx)-1)])*(vy[2:length(vy)]+vy[1:(length(vy)-1)])*0.5),digits=3)
 Categories=rep(2,nGeno)	#Initialise all categories at 'average'
 Categories[upper<LowerAv]=1;Categories[lower>UpperAv]=3;Categories[lower>LowerHi]=4

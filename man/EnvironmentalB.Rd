@@ -8,4 +8,3 @@ Example data for Crohns disease in correct input format. Also as text file "Envi
 \usage{data("REGENT")}
 \format{data frame}
 \keyword{datasets}
-
