@@ -1,14 +1,15 @@
 ba2ef8bffeb867c6630531210dc4b065 *COPYING
-b6e68c515bc267b612112651c6f4aa46 *DESCRIPTION
+728b9884a07581aa09d7718610a9f35a *DESCRIPTION
 9d1607cbb86fdfa22541526f1ad523bd *NAMESPACE
 b7cadcea2f28d3b43fabadbfe411b89b *R/REGENT.R
-e0d04f62bdeacf482d7d31da3f509128 *REGENT.zip
+0759daab56cbeda787c4dab39f5bff27 *REGENT.zip
 544aec2fb6f87b1d384a8439c2b5411a *data/EnvironmentalA.txt.gz
 296bdf00196ca032f052a3f1d6167b16 *data/EnvironmentalB.txt.gz
 784a80c90c059b26fa28791649f604f2 *data/GeneticA.txt.gz
 cbe4b44698b2cdb9bdd70140d40c2f13 *data/GeneticB.txt.gz
 da7754861c9c9f0d836812be1102eaaa *data/Inds.txt.gz
 7a182466d333bb9f5ff1051b196347d9 *data/REGENT.rda
+861954f19c5f6d97cf64be7ce77f07e0 *inst/doc/REGENTv1.0.2_usermanual.pdf
 676e4f2ee3a173cc758c1ca9f31e035a *man/EnvironmentalA.Rd
 c70bd2a256f274c52317410ed6dd5314 *man/EnvironmentalB.Rd
 77103857d6973c7629a655d9332b3f6d *man/GeneticA.Rd
